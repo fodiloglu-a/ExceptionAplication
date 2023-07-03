@@ -3,14 +3,18 @@ package com.example.exceptionaplication.Model;
 import ch.qos.logback.core.net.ssl.SSL;
 import lombok.Data;
 import lombok.NonNull;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
+
 @Document
-public class TurkishWordModel extends AbstractWordModel{
-    @NonNull
+@Data
+public class TurkishWordModel  {
+    private Long id;
+
     private String wordTurkish;
-    @NonNull
+
     private String wordEnglish;
+
 
 }
