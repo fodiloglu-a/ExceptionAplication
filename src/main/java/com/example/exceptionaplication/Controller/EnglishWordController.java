@@ -1,6 +1,8 @@
 package com.example.exceptionaplication.Controller;
 
 
+
+import com.example.exceptionaplication.exceptio.CustomerException;
 import com.example.exceptionaplication.mapper.WordDTO;
 import com.example.exceptionaplication.services.EnglishServicesImp;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +22,7 @@ public class EnglishWordController {
 
 
     @GetMapping("/all")
-    public ResponseEntity<List<WordDTO>> getAll(){
+    public ResponseEntity<List<WordDTO>> getAll() {
         return ResponseEntity.ok().body(englishServices.getAll());
     }
 
